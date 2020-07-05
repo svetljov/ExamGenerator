@@ -9,6 +9,10 @@ properties
 *.exe
 
 
+*.aux
+*.pdf
+*.gz
+
 # Created by http://www.gitignore.io
 
 ### VisualStudio ###
