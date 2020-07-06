@@ -51,8 +51,9 @@
 
             for (int i = 0; i < numberOfExams; i++)
             {
-                File.AppendAllText(this.outputFileName, Text.text1(examName) + Environment.NewLine + Environment.NewLine);
-                File.AppendAllText(this.outputFileName, Text.text2(this.coefficientC1, this.coefficientC2, this.coefficientC3) + Environment.NewLine + Environment.NewLine);
+                File.AppendAllText(this.outputFileName, Text.text1(examName) + Environment.NewLine + Environment.NewLine + Environment.NewLine);
+                File.AppendAllText(this.outputFileName, @"\vspace{3mm}" + Environment.NewLine + "Три имена, факултетен номер:" + new String('.', 100) + Environment.NewLine + @"\vspace{3mm}" + Environment.NewLine + Environment.NewLine);
+                File.AppendAllText(this.outputFileName, Text.text2(this.coefficientC1, this.coefficientC2, this.coefficientC3) + Environment.NewLine + Environment.NewLine + Environment.NewLine);
 
                 exam = GenerateExam(i);
                 File.AppendAllLines(this.outputFileName, exam);
